@@ -1,0 +1,51 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Black outline for first V -->
+  <path d="M 40 40 L 75 130 Q 80 135 85 130 L 120 40" 
+        fill="none" 
+        stroke="black" 
+        stroke-width="26" 
+        stroke-linecap="round"/>
+  
+  <!-- Black outline for second V -->
+  <path d="M 80 40 L 115 130 Q 120 135 125 130 L 160 40" 
+        fill="none" 
+        stroke="black" 
+        stroke-width="26" 
+        stroke-linecap="round"/>
+  
+  <!-- Gold border for first V -->
+  <path d="M 40 40 L 75 130 Q 80 135 85 130 L 120 40" 
+        fill="none" 
+        stroke="url(#goldGradient)" 
+        stroke-width="20" 
+        stroke-linecap="round"/>
+  
+  <!-- Gold border for second V -->
+  <path d="M 80 40 L 115 130 Q 120 135 125 130 L 160 40" 
+        fill="none" 
+        stroke="url(#goldGradient)" 
+        stroke-width="20" 
+        stroke-linecap="round"/>
+  
+  <!-- Black fill for first V -->
+  <path d="M 40 40 L 75 130 Q 80 135 85 130 L 120 40" 
+        fill="none" 
+        stroke="black" 
+        stroke-width="12" 
+        stroke-linecap="round"/>
+  
+  <!-- Black fill for second V -->
+  <path d="M 80 40 L 115 130 Q 120 135 125 130 L 160 40" 
+        fill="none" 
+        stroke="black" 
+        stroke-width="12" 
+        stroke-linecap="round"/>
+</svg>
