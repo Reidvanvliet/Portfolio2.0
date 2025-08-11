@@ -13,6 +13,11 @@ const LandingSection = ({numPages}) => {
     const animationMiddle1 = parseFloat(animationStart) + 0.08/numPages;
     const animationMiddle2 = parseFloat(animationStart) + 0.12/numPages;
 
+      console.log("start " + animationStart)
+      console.log("middle1 " + animationMiddle1)
+      console.log("middle2 " + animationMiddle2)
+      console.log("end " + animationEnd);
+
     const opacity = useTransform(scrollYProgress, [animationStart, animationMiddle1, animationMiddle2, animationEnd], [0, 1, 1, 0]);
     const y = useTransform(scrollYProgress, [animationStart, animationEnd], ['0', "-100vh"]);
     const scale = useTransform(scrollYProgress, [animationStart, animationMiddle1, animationMiddle2, animationEnd], [.5, 1, 1, .5]);

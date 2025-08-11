@@ -4,14 +4,14 @@ import LandingSection from './components/LandingSection';
 import RtsSolutions from './components/RtsSolutions';
 import GoldenChopsticks from './components/GoldenChopsticks';
 import Jamming from './components/Jamming';
-// import ExperienceSection from './components/ExperienceSection';
+import ExperienceSection from './components/ExperienceSection';
 // import ContactSection from './components/ContactSection';
 import './App.css';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   //Makes the animations use a fraction of the scroll bar instead
-  const numPages = 2;
+  const numPages = 3;
 
   const handleLoadingComplete = () => {
     setIsLoading(false);
@@ -23,6 +23,7 @@ function App() {
       <RtsSolutions numPages={numPages}/>
       <GoldenChopsticks numPages={numPages} />
       <Jamming numPages={numPages} />
+      <ExperienceSection numPages={numPages} />
       {/* {!isLoading && (
         <>
           <ProjectsSection />
