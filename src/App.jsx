@@ -5,7 +5,7 @@ import RtsSolutions from './components/RtsSolutions';
 import GoldenChopsticks from './components/GoldenChopsticks';
 import Jamming from './components/Jamming';
 import ExperienceSection from './components/ExperienceSection';
-// import ContactSection from './components/ContactSection';
+import ContactSection from './components/ContactSection';
 import './App.css';
 
 function App() {
@@ -24,13 +24,7 @@ function App() {
       <GoldenChopsticks numPages={numPages} />
       <Jamming numPages={numPages} />
       <ExperienceSection numPages={numPages} />
-      {/* {!isLoading && (
-        <>
-          <ProjectsSection />
-          <ExperienceSection />
-          <ContactSection />
-        </>
-      )} */}
+      <ContactSection numPages={numPages} />
       {isLoading && <LoadingScreen onLoadingComplete={handleLoadingComplete} />}
     </div>
   );
