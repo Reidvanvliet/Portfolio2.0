@@ -5,27 +5,11 @@ const GoldenChopsticks = ({ numPages }) => {
   const { scrollYProgress } = useScroll();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  const height = useTransform(
+  const circle = useTransform(
     scrollYProgress,
     [1.1 / numPages, 1.3 / numPages],
-    ["0vh", "100vh"]
-  );
-  const width = useTransform(
-    scrollYProgress,
-    [1.1 / numPages, 1.3 / numPages],
-    ["0vw", "100vw"]
-  );
-  const borderRadius = useTransform(
-    scrollYProgress,
-    [1.1 / numPages, 1.3 / numPages],
-    ["50vw 50vw 50vw 50vw", "0vw 0vw 0vw 0vw"]
-  );
-
-  const opacity = useTransform(
-    scrollYProgress,
-    [1.1 / numPages, 1.3 / numPages],
-    [0, 1]
-  );
+    ["circle(0)", "circle(100%)"]
+  )
 
   useEffect(() => {
     const handleResize = () => {
@@ -42,10 +26,7 @@ const GoldenChopsticks = ({ numPages }) => {
     <motion.div
       className="fixed w-full h-full z-20 top-1/2 overflow-hidden left-1/2 transform -translate-x-1/2 -translate-y-1/2"
       style={{
-        height,
-        width,
-        borderRadius,
-        opacity,
+        clipPath: circle,
         background: "center no-repeat url(Golden-chopsticks.png)",
         backgroundSize: "cover",
       }}
