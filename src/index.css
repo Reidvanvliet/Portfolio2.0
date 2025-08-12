@@ -10,9 +10,18 @@
     src: url(Vabi-Dasabi.ttf);
 }
 
+@font-face {
+    font-family: Reglisse;
+    src: url(Reglisse.otf);
+}
+
 h1 {
     font-size: 8rem;
-    font-family: "VabiDasabi", sans-serif;
+    font-family: "Reglisse", sans-serif;
+    opacity: 100%;
+    color: rgb(133, 14, 14);
+    text-align: center;
+    letter-spacing: 4px;
 }
 
 body {

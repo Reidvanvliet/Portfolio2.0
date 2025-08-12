@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 const ExperienceSection = ({ numPages }) => {
   const { scrollYProgress } = useScroll();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  let animationStart = 1.8 / numPages;
+  let animationStart = 1.3 / numPages;
 
   const experience = [
     { title: "Web Developer", body: "I’m a full-stack developer with 1,000+ hours of experience through courses on Codecademy with a certification in Full-Stack Engineering. I specialize in the PERN stack and have worked on multiple professional and personal projects. I have a strong understanding of web security and frequently integrate AI tools into my development process. I'm constantly seeking new challenges and opportunities to grow because web development is AWESOME!" },
@@ -15,7 +15,7 @@ const ExperienceSection = ({ numPages }) => {
 
   const opacity = useTransform(
     scrollYProgress,
-    [1.7 / numPages, 1.9 / numPages],
+    [1.2 / numPages, 1.4 / numPages],
     [0, 1]
   );
 
@@ -80,7 +80,7 @@ const ExperienceSection = ({ numPages }) => {
     // Cleanup
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-// lg:grid lg:grid-cols-2 lg:gap-4 lg:place-items-center lg:max-h-screen lg:max-w-4xl lg:mx-auto lg:my-auto lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2
+  
   return (
     <motion.div
       className="fixed w-full h-full z-40 top-0 left-0 flex flex-col lg:grid lg:grid-cols-2 lg:gap-4 justify-center justify-items-center items-center p-4"

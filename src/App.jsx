@@ -11,7 +11,7 @@ import './App.css';
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   //Makes the animations use a fraction of the scroll bar instead
-  const numPages = 3;
+  const numPages = 2.6;
 
   const handleLoadingComplete = () => {
     setIsLoading(false);
