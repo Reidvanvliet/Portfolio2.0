@@ -55,14 +55,13 @@ const ContactSection = ({ numPages }) => {
 
   return (
     <motion.div
-      className="fixed w-full h-full z-20 top-0 left-0 flex flex-col justify-center items-center med:p-4 overflow-y-hidden"
+      className="fixed w-full h-full z-20 top-0 left-0 flex flex-col justify-center items-center med:p-4 overflow-y-hidden bg-slate-100"
       style={{
         height,
         opacity,
-        backgroundColor: "white",
       }}
     >
-      <div className="bg-white/90 backdrop-blur-sm rounded-lg shadow-xl p-8 max-w-2xl w-full max-h-full">
+      <div className="bg-slate-50 backdrop-blur-sm rounded-lg shadow-xl p-8 max-w-2xl w-full max-h-full">
         <h2 className="text-4xl font-bold text-center mb-8 text-gray-800">Get In Touch</h2>
         
         <form onSubmit={handleSubmit} className="space-y-6">

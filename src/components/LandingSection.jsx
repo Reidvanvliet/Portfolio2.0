@@ -28,7 +28,7 @@ const LandingSection = ({numPages}) => {
       <motion.div
           style={{ opacity, y, scale }}
           >
-          <h1 className="absolute bg-gradient-to-b from-gray-100 via-gray-200 via-gray-600 to-gray-200 bg-clip-text text-transparent left-1/2 z-2 transform -translate-x-1/2 -translate-y-1/2 w-full text-center drop-shadow-xl/100">{title}</h1>
+          <h1 className="absolute text-gray-300 left-1/2 z-2 transform -translate-x-1/2 -translate-y-1/2 w-full text-center">{title}</h1>
         </motion.div>
     )
   }

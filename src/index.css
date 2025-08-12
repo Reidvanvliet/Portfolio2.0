@@ -5,9 +5,14 @@
     src: url(RacingSansOne-Regular.ttf);
 }
 
+@font-face {
+    font-family: VabiDasabi;
+    src: url(Vabi-Dasabi.ttf);
+}
+
 h1 {
     font-size: 8rem;
-    font-family: "RacingSans", sans-serif;
+    font-family: "VabiDasabi", sans-serif;
 }
 
 body {
