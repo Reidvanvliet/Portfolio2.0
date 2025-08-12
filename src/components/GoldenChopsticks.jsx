@@ -41,7 +41,7 @@ const GoldenChopsticks = ({ numPages }) => {
           href="https://rtssolutionsltd.ca" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="absolute whitespace-nowrap text-slate-200 bg-gradient-to-b from-gray-400 via-gray-700 via-gray-900 to-gray-400 text-black left-1/2 z-2 transform -translate-x-1/2 -translate-y-1/2 bottom-1/8 px-12 py-5 text-center drop-shadow-xl hover:from-stone-200 hover:via-stone-300 hover:via-stone-700 hover:to-stone-300 transition-all duration-200 text-4xl font-[RacingSans] rounded-2xl shadow-md/50 hover: active:shadow-inner active:scale-95"
+          className="absolute whitespace-nowrap text-slate-200 bg-gradient-to-b from-gray-400 via-gray-700 via-gray-900 to-gray-400 text-black left-1/2 z-25 transform -translate-x-1/2 -translate-y-1/2 bottom-1/8 px-12 py-5 text-center drop-shadow-xl hover:from-stone-200 hover:via-stone-300 hover:via-stone-700 hover:to-stone-300 transition-all duration-200 text-4xl font-[RacingSans] rounded-2xl shadow-md/50 hover: active:shadow-inner active:scale-95"
         >
           Visit Golden Chopsticks
         </a>

@@ -83,7 +83,7 @@ const ExperienceSection = ({ numPages }) => {
 // lg:grid lg:grid-cols-2 lg:gap-4 lg:place-items-center lg:max-h-screen lg:max-w-4xl lg:mx-auto lg:my-auto lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2
   return (
     <motion.div
-      className="fixed w-full h-full z-20 top-0 left-0 flex flex-col lg:grid lg:grid-cols-2 lg:gap-4 justify-center justify-items-center items-center p-4"
+      className="fixed w-full h-full z-40 top-0 left-0 flex flex-col lg:grid lg:grid-cols-2 lg:gap-4 justify-center justify-items-center items-center p-4"
       style={{
         opacity,
         background: "center no-repeat url(Cork-background.jpg)",

@@ -55,7 +55,7 @@ const ContactSection = ({ numPages }) => {
 
   return (
     <motion.div
-      className="fixed w-full h-full z-20 top-0 left-0 flex flex-col justify-center items-center med:p-4 overflow-y-hidden bg-slate-100"
+      className="fixed w-full h-full z-50 top-0 left-0 flex flex-col justify-center items-center med:p-4 overflow-y-hidden bg-slate-100"
       style={{
         height,
         opacity,
