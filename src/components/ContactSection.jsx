@@ -62,7 +62,7 @@ const ContactSection = ({ numPages }) => {
       }}
     >
       <div className="bg-slate-50 backdrop-blur-sm rounded-lg shadow-xl p-8 max-w-2xl w-full max-h-full">
-        <h2 className="text-4xl font-bold text-center mb-8 text-gray-800">Get In Touch</h2>
+        <h2 className="text-2xl font-bold text-center mb-8 text-gray-800">Get In Touch</h2>
         
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
