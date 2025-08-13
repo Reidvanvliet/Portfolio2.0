@@ -25,7 +25,7 @@ const Jamming = () => {
 
   return (
     <motion.div
-      className="sticky w-full h-screen z-10 top-1/2 overflow-hidden left-1/2 transform -translate-y-1/2"
+      className="sticky top-0 w-full h-screen z-10 top-1/2 overflow-hidden left-1/2 transform -translate-y-1/2"
       style={{
         clipPath: circle,
         background: "center no-repeat url(Jamming.png)",

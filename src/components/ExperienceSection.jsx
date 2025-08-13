@@ -90,7 +90,7 @@ const ExperienceSection = () => {
   
   return (
     <motion.div
-      className="sticky w-full h-screen z-40 top-0 left-0 flex flex-col lg:grid lg:grid-cols-2 lg:gap-4 justify-center justify-items-center items-center p-4 select-none overflow-hidden"
+      className="sticky top-0 w-full h-screen z-40 top-0 left-0 flex flex-col lg:grid lg:grid-cols-2 lg:gap-4 justify-center justify-items-center items-center p-4 select-none overflow-hidden"
       style={{
         opacity,
         scale,
