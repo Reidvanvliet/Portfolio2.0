@@ -41,9 +41,9 @@ const RtsSolutions = ({ numPages }) => {
           href="https://rtssolutionsltd.ca" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="absolute whitespace-nowrap text-slate-200 text-black left-1/2 z-12 transform -translate-x-1/2 -translate-y-1/2 bottom-1/8 px-12 py-5 text-center drop-shadow-xl hover:from-stone-200 hover:via-stone-300 hover:via-stone-700 hover:to-stone-300 transition-all duration-200 text-4xl rounded-2xl shadow-md/50 hover: active:shadow-inner active:scale-95"
+          className="absolute bg-sunset text-red-900 font-[Reglisse] text-5xl left-1/2 z-12 transform -translate-x-1/2 -translate-y-1/2 bottom-1/8 px-10 py-3 text-center shadow-xl/60 transition-all duration-200 rounded-2xl shadow-md/50 hover:text-red-950 active:shadow-none active:scale-95 border-3"
         >
-          Visit RTS Solutions
+          RTS Solutions
         </a>
       </div>
     </motion.div>

@@ -15,6 +15,10 @@
     src: url(Reglisse.otf);
 }
 
+@theme {
+    --color-sunset: #d98c1c;
+}
+
 h1 {
     font-size: 8rem;
     font-family: "Reglisse", sans-serif;

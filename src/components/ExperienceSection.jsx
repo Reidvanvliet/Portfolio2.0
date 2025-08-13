@@ -19,6 +19,12 @@ const ExperienceSection = ({ numPages }) => {
     [0, 1]
   );
 
+  const scale = useTransform(
+    scrollYProgress,
+    [1.2 / numPages, 1.21 / numPages],
+    [0, 1]
+  );
+
   const animation = (experience, index) => {
     const animationEnd =
       parseFloat(animationStart) + parseFloat((0.2 / numPages).toFixed(2));
@@ -83,9 +89,10 @@ const ExperienceSection = ({ numPages }) => {
   
   return (
     <motion.div
-      className="fixed w-full h-full z-40 top-0 left-0 flex flex-col lg:grid lg:grid-cols-2 lg:gap-4 justify-center justify-items-center items-center p-4"
+      className="fixed w-full h-full z-40 top-0 left-0 flex flex-col lg:grid lg:grid-cols-2 lg:gap-4 justify-center justify-items-center items-center p-4 select-none"
       style={{
         opacity,
+        scale,
         background: "center no-repeat url(Cork-background.jpg)",
         backgroundSize: "cover",
         backgroundPosition: "center",
