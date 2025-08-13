@@ -56,7 +56,7 @@ const ContactSection = () => {
 
   return (
     <motion.div
-      className="fixed w-full h-full z-50 top-0 left-0 flex flex-col justify-center items-center med:p-4 overflow-y-hidden bg-slate-100"
+      className="sticky w-full h-screen z-50 top-0 left-0 flex flex-col justify-center items-center med:p-4 overflow-y-hidden bg-slate-100"
       style={{
         height,
         opacity,

@@ -25,7 +25,7 @@ const GoldenChopsticks = () => {
 
   return (
     <motion.div
-      className="fixed w-full h-full z-20 top-1/2 overflow-hidden left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+      className="sticky w-full h-screen z-10 top-1/2 overflow-hidden left-1/2 transform -translate-y-1/2"
       style={{
         clipPath: circle,
         background: "center no-repeat url(Golden-chopsticks.png)",
