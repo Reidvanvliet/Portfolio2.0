@@ -32,11 +32,11 @@ const Jamming = () => {
         backgroundSize: "cover",
       }}
     >
-      <div className="flex flex-col justify-center items-center h-screen backdrop-blur-[3px]">
+      <div className="flex flex-col justify-center items-center h-full backdrop-blur-[3px]">
         {windowWidth < 700 ? (
           <img src="Jamming-mobile.png" />
         ) : (
-          <img src="Jamming.png" className="max-h-full" />
+          <img src="Jamming.png" />
         )}
       </div>
         <a 

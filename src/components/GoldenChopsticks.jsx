@@ -32,11 +32,11 @@ const GoldenChopsticks = () => {
         backgroundSize: "cover",
       }}
     >
-      <div className="flex flex-col justify-center items-center h-screen backdrop-blur-[3px]">
+      <div className="flex flex-col justify-center items-center h-full backdrop-blur-[3px]">
         {windowWidth < 700 ? (
           <img src="Golden-chopsticks-mobile.png" />
         ) : (
-          <img src="Golden-chopsticks.png" className="max-h-full" />
+          <img src="Golden-chopsticks.png" />
         )}
         <a 
           href="https://golden-chopsticks.onrender.com/" 

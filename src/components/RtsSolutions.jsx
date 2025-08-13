@@ -32,11 +32,11 @@ const RtsSolutions = () => {
         backgroundSize: "cover",
       }}
     >
-      <div className="flex flex-col justify-center items-center h-screen backdrop-blur-[3px]">
+      <div className="flex flex-col justify-center items-center h-full backdrop-blur-[3px]">
         {windowWidth < 700 ? (
           <img src="RTS-mobile.png" />
         ) : (
-          <img src="RTS.png" className="max-h-full" />
+          <img src="RTS.png" />
         )}
         <a 
           href="https://rtssolutionsltd.ca" 
