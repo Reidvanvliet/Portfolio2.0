@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useScrollProgress } from "../contexts/ScrollContext";
 
-const ContactSection = ({ numPages }) => {
-  const { scrollYProgress } = useScroll();
+const ContactSection = () => {
+  const { scrollYProgress, numPages } = useScrollProgress();
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',

@@ -1,8 +1,9 @@
 import React, { useEffect, useState, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useScrollProgress } from "../contexts/ScrollContext";
 
-const ExperienceSection = ({ numPages }) => {
-  const { scrollYProgress } = useScroll();
+const ExperienceSection = () => {
+  const { scrollYProgress, numPages } = useScrollProgress();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   let animationStart = 1.3 / numPages;
 

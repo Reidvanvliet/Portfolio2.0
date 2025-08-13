@@ -1,8 +1,9 @@
 import React, { useEffect, useState, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useScrollProgress } from "../contexts/ScrollContext";
 
-const GoldenChopsticks = ({ numPages }) => {
-  const { scrollYProgress } = useScroll();
+const GoldenChopsticks = () => {
+  const { scrollYProgress, numPages } = useScrollProgress();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const circle = useTransform(

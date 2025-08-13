@@ -1,8 +1,9 @@
-import React, { useEffect, useState, useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import React, { useEffect, useRef } from "react";
+import { motion, useTransform } from "framer-motion";
+import { useScrollProgress } from "../contexts/ScrollContext";
 
-const LandingSection = ({ numPages }) => {
-  const { scrollYProgress } = useScroll();
+const LandingSection = () => {
+  const { scrollYProgress, numPages } = useScrollProgress();
   const lastLoggedValue = useRef(0);
 
   useEffect(() => {
@@ -16,11 +17,11 @@ const LandingSection = ({ numPages }) => {
 
   const text = "Reid VanVliet";
 
-  const y = useTransform(scrollYProgress, [0/numPages, 0.2/numPages], ["120vw", "0vw"]);
+  const y = useTransform(scrollYProgress, [0/numPages , 0.2/numPages], ["120vh", "0vh"]);
 
   return (
     <motion.div
-      className="fixed w-full h-full z-2 opacity-100 overflow-hidden left-1/2 transform -translate-x-1/2"
+      className="sticky top-0 w-full h-screen z-2 opacity-100 overflow-hidden left-1/2"
       style={{
         backgroundImage: "url(Origami-background.jpg)",
         backgroundPosition: "80% 50%",
