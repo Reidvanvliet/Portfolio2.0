@@ -128,7 +128,7 @@ const ContactSection = () => {
         opacity,
       }}
     >
-      <div className="bg-slate-50 backdrop-blur-sm rounded-lg shadow-xl p-4 md:p-8 max-w-2xl w-full max-h-full overflow-y-auto">
+      <div className="bg-slate-50 backdrop-blur-sm rounded-lg shadow-xl p-4 md:p-8 max-w-2xl w-full max-h-full overflow-y-hidden">
         <h2 className="text-xl md:text-2xl font-bold text-center mb-4 md:mb-8 text-gray-800">Get In Touch</h2>
         
         {/* Status Messages */}
