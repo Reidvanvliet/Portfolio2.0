@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: Reglisse;
-    src: url(Reglisse.otf);
+    src: url(Reglisse.otf) format(opentype);
 }
 
 @theme {
