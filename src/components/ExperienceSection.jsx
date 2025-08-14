@@ -32,7 +32,7 @@ const ExperienceSection = () => {
   const card1Rotate = useTransform(
     scrollYProgress,
     [1.9 / numPages, 2.0 / numPages],
-    [1, 1]
+    [-1, -1]
   );
 
   const card2Opacity = useTransform(
@@ -64,7 +64,7 @@ const ExperienceSection = () => {
   const card3Rotate = useTransform(
     scrollYProgress,
     [2.1 / numPages, 2.2 / numPages],
-    [-1, -1]
+    [1, 1]
   );
 
   const card4Opacity = useTransform(
