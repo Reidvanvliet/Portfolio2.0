@@ -1,8 +1,12 @@
 @import "tailwindcss";
+@import url('/specimen_stylesheet.css');
 
 @font-face {
-    font-family: Reglisse;
-    src: url(Reglisse.otf) format(opentype);
+    font-family: 'Reglisse';
+    src: url('/Reglisse.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @theme {

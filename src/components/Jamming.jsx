@@ -59,7 +59,7 @@ const Jamming = () => {
                 textAlign: "center",
               }}
             >
-              Jammming is a React web application that integrates with Spotify's
+              Jammming is a React web application using Spotify's
               Web API for music discovery and playlist management. Built with
               Vite and modern React hooks, it enables users to search for
               tracks, artists, and albums using Spotify's client credentials

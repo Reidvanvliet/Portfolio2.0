@@ -61,8 +61,8 @@ const GoldenChopsticks = () => {
             >
               Golden Chopsticks is a full-stack React web application
               featuring user authentication via Google OAuth, menu
-              management, shopping cart functionality, and
-              Stripe payment integration. The frontend uses React 19 with React
+              management, cart functionality, and
+              Stripe payments. The frontend uses React 19 with React
               Router, Tailwind CSS, and Google Maps API for address
               autocomplete. The Node.js/Express backend implements JWT
               authentication, PostgreSQL database with Sequelize ORM, admin menu
