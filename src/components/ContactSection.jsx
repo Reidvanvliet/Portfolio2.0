@@ -12,6 +12,9 @@ const ContactSection = () => {
     phoneNumber: '',
     additionalInfo: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+  const [phoneError, setPhoneError] = useState('');
 
   const height = useTransform(
     scrollYProgress,
@@ -31,16 +34,79 @@ const ContactSection = () => {
     [0, 1]
   );
 
-  const handleInputChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+  const validatePhoneNumber = (phone) => {
+    // Regex for North American phone numbers (with or without country code)
+    // Accepts formats like: (123) 456-7890, 123-456-7890, 123.456.7890, 123 456 7890, +1 123 456 7890
+    const phoneRegex = /^(\+?1[-.\s]?)?\(?([0-9]{3})\)?[-.\s]?([0-9]{3})[-.\s]?([0-9]{4})$/;
+    return phoneRegex.test(phone.replace(/\s+/g, ' ').trim());
   };
 
-  const handleSubmit = (e) => {
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+
+    // Validate phone number on change
+    if (name === 'phoneNumber') {
+      if (value && !validatePhoneNumber(value)) {
+        setPhoneError('Please enter a valid phone number (e.g., 250-718-9276)');
+      } else {
+        setPhoneError('');
+      }
+    }
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    // Validate phone number before submission if provided
+    if (formData.phoneNumber && !validatePhoneNumber(formData.phoneNumber)) {
+      setPhoneError('Please enter a valid phone number');
+      setIsSubmitting(false);
+      return;
+    }
+
+    const formDataToSend = new FormData();
+    formDataToSend.append('access_key', '54a6242d-e4ce-452d-ab07-726d2044d0ef');
+    formDataToSend.append('name', `${formData.firstName} ${formData.lastName}`);
+    formDataToSend.append('email', formData.email);
+    formDataToSend.append('company', formData.companyName);
+    formDataToSend.append('phone', formData.phoneNumber);
+    formDataToSend.append('message', formData.additionalInfo);
+    formDataToSend.append('subject', 'New Contact Form Submission from Portfolio');
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formDataToSend
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitStatus('success');
+        setFormData({
+          firstName: '',
+          lastName: '',
+          companyName: '',
+          email: '',
+          phoneNumber: '',
+          additionalInfo: ''
+        });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const scrollToTop = () => {
@@ -50,23 +116,36 @@ const ContactSection = () => {
   const downloadResume = () => {
     const link = document.createElement('a');
     link.href = '/resume.pdf';
-    link.download = 'resume.pdf';
+    link.download = 'Reid_VanVliet_2025-08-14.pdf';
     link.click();
   };
 
   return (
     <motion.div
-      className="sticky top-0 w-full h-screen z-50 top-0 left-0 flex flex-col justify-center items-center med:p-4 overflow-y-hidden bg-slate-100"
+      className="sticky top-0 w-full h-screen z-50 top-0 left-0 flex flex-col justify-center items-center p-2 md:p-4 overflow-y-hidden bg-slate-100"
       style={{
         height,
         opacity,
       }}
     >
-      <div className="bg-slate-50 backdrop-blur-sm rounded-lg shadow-xl p-8 max-w-2xl w-full max-h-full">
-        <h2 className="text-2xl font-bold text-center mb-8 text-gray-800">Get In Touch</h2>
+      <div className="bg-slate-50 backdrop-blur-sm rounded-lg shadow-xl p-4 md:p-8 max-w-2xl w-full max-h-full overflow-y-auto">
+        <h2 className="text-xl md:text-2xl font-bold text-center mb-4 md:mb-8 text-gray-800">Get In Touch</h2>
         
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {/* Status Messages */}
+        {submitStatus === 'success' && (
+          <div className="mb-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-md">
+            Thank you! Your message has been sent successfully. I'll get back to you soon.
+          </div>
+        )}
+        
+        {submitStatus === 'error' && (
+          <div className="mb-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-md">
+            Sorry, there was an error sending your message. Please try again or contact me directly.
+          </div>
+        )}
+        
+        <form onSubmit={handleSubmit} className="space-y-3 md:space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
             <div>
               <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">
                 First Name *
@@ -78,7 +157,7 @@ const ContactSection = () => {
                 required
                 value={formData.firstName}
                 onChange={handleInputChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-1.5 md:py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
             
@@ -93,7 +172,7 @@ const ContactSection = () => {
                 required
                 value={formData.lastName}
                 onChange={handleInputChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-1.5 md:py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
           </div>
@@ -137,8 +216,15 @@ const ContactSection = () => {
               name="phoneNumber"
               value={formData.phoneNumber}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className={`w-full px-3 py-1.5 md:py-2 border rounded-md focus:outline-none focus:ring-2 ${
+                phoneError 
+                  ? 'border-red-300 focus:ring-red-500' 
+                  : 'border-gray-300 focus:ring-blue-500'
+              }`}
             />
+            {phoneError && (
+              <p className="mt-1 text-sm text-red-600">{phoneError}</p>
+            )}
           </div>
 
           <div>
@@ -148,40 +234,37 @@ const ContactSection = () => {
             <textarea
               id="additionalInfo"
               name="additionalInfo"
-              rows="4"
+              rows="3"
               value={formData.additionalInfo}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-1.5 md:py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             ></textarea>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-1 md:gap-6 gap-3">
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-200"
+              disabled={isSubmitting}
+              className="w-full bg-blue-600 text-white py-1.5 md:py-2 px-4 rounded-md hover:bg-blue-700 disabled:bg-blue-300 disabled:cursor-not-allowed transition-colors duration-200 text-sm md:text-base"
             >
-              Send Message
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
             
             <button
               onClick={downloadResume}
-              className="w-full bg-green-600 text-white md:py-2 md:px-4 rounded-md hover:bg-green-700 transition-colors duration-200"
+              className="w-full bg-green-600 text-white py-1.5 md:py-2 px-4 rounded-md hover:bg-green-700 transition-colors duration-200 text-sm md:text-base"
             >
               Download Resume
             </button>
           </div>
+          
+          <button
+            onClick={() => window.location.href = 'tel:250-718-9276'}
+            className="w-full bg-gray-600 text-white py-1.5 md:py-2 px-4 rounded-md hover:bg-gray-700 transition-colors duration-200 text-sm md:text-base"
+          >
+            Call 250-718-9276
+          </button>
         </form>
-
-        <div className="text-center my-8">
-          <div className="hidden md:flex items-center justify-center">
-            <div className="flex-1 border-t border-gray-300"></div>
-            <span className="px-4 text-gray-500 font-medium">or</span>
-            <div className="flex-1 border-t border-gray-300"></div>
-          </div>
-          <p className="-mt-3 md:mt-8 text-lg font-medium text-gray-700">
-            Call <a href="tel:250-718-9276" className="text-blue-600 hover:underline">250-718-9276</a>
-          </p>
-        </div>
       </div>
     <motion.button
         style={{
