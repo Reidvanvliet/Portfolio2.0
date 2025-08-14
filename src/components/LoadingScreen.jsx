@@ -6,26 +6,71 @@ const LoadingScreen = ({onLoadingComplete}) => {
   const [isComplete, setIsComplete] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setLoadingProgress(prev => {
-        if (prev >= 100) {
-          clearInterval(interval);
-          setTimeout(() => {
-            setIsComplete(true);
-            setTimeout(() => onLoadingComplete(), 800);
-          }, 500);
-          return 100;
-        }
-        return prev + 2;
-      });
-    }, 50);
+    // Critical images that need to load before showing the site
+    const criticalImages = [
+      '/Origami-background.jpg',
+      '/Logo.svg',
+      '/RTS.png',
+      '/RTS-mobile.png',
+      '/Golden-chopsticks.png',
+      '/Golden-chopsticks-mobile.png',
+      '/Jamming.png',
+      '/Jamming-mobile.png',
+      '/Cork-background.jpg',
+      '/Index-card.jpg',
+      '/Pushpin.png',
+      '/Restaurants-delivered.png'
+    ];
 
-    return () => clearInterval(interval);
-  }, [onLoadingComplete]);
+    let loadedCount = 0;
+    const totalImages = criticalImages.length;
+
+    const updateProgress = () => {
+      const progress = Math.round((loadedCount / totalImages) * 100);
+      setLoadingProgress(progress);
+      
+      if (progress >= 100) {
+        setTimeout(() => {
+          setIsComplete(true);
+          setTimeout(() => onLoadingComplete(), 800);
+        }, 500);
+      }
+    };
+
+    // Load all critical images
+    criticalImages.forEach((src) => {
+      const img = new Image();
+      img.onload = () => {
+        loadedCount++;
+        updateProgress();
+      };
+      img.onerror = () => {
+        // Still count failed images to prevent infinite loading
+        loadedCount++;
+        updateProgress();
+      };
+      img.src = src;
+    });
+
+    // Fallback timeout in case images take too long
+    const fallbackTimeout = setTimeout(() => {
+      if (loadingProgress < 100) {
+        setLoadingProgress(100);
+        setTimeout(() => {
+          setIsComplete(true);
+          setTimeout(() => onLoadingComplete(), 800);
+        }, 500);
+      }
+    }, 10000); // 10 second timeout
+
+    return () => {
+      clearTimeout(fallbackTimeout);
+    };
+  }, [onLoadingComplete, loadingProgress]);
 
   return (
     <motion.div 
-    className="fixed flex items-center justify-center min-h-screen w-full bg-gray-100 absolute inset-0 z-100"
+    className="fixed flex flex-col items-center justify-center min-h-screen w-full bg-gray-100 absolute inset-0 z-100"
     initial={{ opacity: 1 }}
     animate={isComplete ? { opacity: 0 } : { opacity: 1, scale: 1 }}
       transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -146,6 +191,19 @@ const LoadingScreen = ({onLoadingComplete}) => {
           }}
         />
       </motion.svg>
+      
+      {/* Loading Progress Bar */}
+      <div className="mt-4 w-48 h-1 bg-gray-300 rounded-full overflow-hidden">
+        <motion.div
+          className="h-full bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 rounded-full"
+          initial={{ width: 0 }}
+          animate={{ width: `${loadingProgress}%` }}
+          transition={{
+            duration: 0.3,
+            ease: "easeOut"
+          }}
+        />
+      </div>
     </motion.div>
   );
 };
