@@ -66,7 +66,7 @@ const Jamming = () => {
               flow. The app features OAuth authentication for playlist creation,
               allowing logged-in users to curate custom playlists and save them
               directly to their Spotify accounts. The interface displays search
-              results in a responsive grid layout with mobile optimization.
+              results in a responsive grid layout.
             </p>
             <a
               href="https://jamming-reidvanvliet.netlify.app/"

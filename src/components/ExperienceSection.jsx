@@ -121,7 +121,7 @@ const ExperienceSection = () => {
         />
         <div className="relative z-10 text-black">
           <h2 className="text-2xl font-bold mb-2">Web Developer</h2>        
-          <p className="text-xs sm:text-sm">I'm a full-stack developer with 1,000+ hours of experience through courses on Codecademy with a certification in Full-Stack Engineering. I specialize in the PERN stack and have worked on multiple professional and personal projects. I have a strong understanding of web security and frequently integrate AI tools into my development process. I'm constantly seeking new challenges and opportunities to grow because web development is AWESOME!</p>
+          <p className="text-xs sm:text-sm">I'm a full-stack developer with experience through courses on Codecademy and a certification in Full-Stack Engineering. I specialize in the PERN stack and have worked on multiple professional and personal projects. I have a strong understanding of web security and frequently integrate AI tools into development. I'm constantly seeking new challenges and opportunities to grow because web development is AWESOME!</p>
         </div>
       </motion.div>
 
@@ -181,7 +181,7 @@ const ExperienceSection = () => {
         />
         <div className="relative z-10 text-black">
           <h2 className="text-2xl font-bold mb-2">Manager</h2>        
-          <p className="text-xs sm:text-sm">When Papa John's West Kelowna came under new ownership, I saw an opportunity to step in and make a difference. Over the next three years, I worked closely with the owner to build a strong, reliable team and establish a positive reputation within the community. Together, we implemented a variety of operational practices that improved efficiency, consistency, and overall performance, transforming the store into a well-run, respected business.</p>
+          <p className="text-xs sm:text-sm">When Papa John's West Kelowna came under new ownership, I saw an opportunity to help. Over the next three years, I worked with the owner to build a strong, reliable team and establish a positive reputation within the community. Together, we implemented operational practices that improved efficiency, consistency, and overall performance, transforming the store into a well-run, respected business.</p>
         </div>
       </motion.div>
 
