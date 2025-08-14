@@ -25,7 +25,7 @@ const LoadingScreen = ({onLoadingComplete}) => {
 
   return (
     <motion.div 
-    className="flex items-center justify-center min-h-screen w-full bg-gray-100 absolute inset-0 z-100"
+    className="fixed flex items-center justify-center min-h-screen w-full bg-gray-100 absolute inset-0 z-100"
     initial={{ opacity: 1 }}
     animate={isComplete ? { opacity: 0 } : { opacity: 1, scale: 1 }}
       transition={{ duration: 0.8, ease: "easeInOut" }}
