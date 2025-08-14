@@ -18,7 +18,7 @@ const Navigation = () => {
     const sectionPositions = {
       'home': 0,
       'projects': 0.6 / numPages, // RTS Solutions starts around here
-      'experience': 2.4 / numPages, // Experience section
+      'experience': 2.6 / numPages, // Experience section
       'contact': 3 / numPages // Contact section
     };
 

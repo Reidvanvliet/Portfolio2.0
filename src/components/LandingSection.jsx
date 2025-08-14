@@ -17,7 +17,7 @@ const LandingSection = () => {
 
   const text = "Reid VanVliet";
 
-  const y = useTransform(scrollYProgress, [0/numPages , 0.2/numPages], ["100vh", "0vh"]);
+  const y = useTransform(scrollYProgress, [0/numPages , 0.15/numPages], ["100vh", "0vh"]);
 
   return (
     <motion.div
