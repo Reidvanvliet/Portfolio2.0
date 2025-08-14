@@ -18,68 +18,68 @@ const ExperienceSection = () => {
     [0, 1]
   );
 
-  // Individual card animations
+  // Individual card animations (delayed by 0.1 after main animation starts)
   const card1Opacity = useTransform(
     scrollYProgress,
-    [1.8 / numPages, 2.0 / numPages],
+    [1.9 / numPages, 2.0 / numPages],
     [0, 1]
   );
   const card1Scale = useTransform(
     scrollYProgress,
-    [1.8 / numPages, 2.0 / numPages],
-    [4, 1]
+    [1.9 / numPages, 2.0 / numPages],
+    [2, 1]
   );
   const card1Rotate = useTransform(
     scrollYProgress,
-    [1.8 / numPages, 2.0 / numPages],
+    [1.9 / numPages, 2.0 / numPages],
     [-5, -5]
   );
 
   const card2Opacity = useTransform(
     scrollYProgress,
-    [2.0 / numPages, 2.2 / numPages],
+    [2.0 / numPages, 2.1 / numPages],
     [0, 1]
   );
   const card2Scale = useTransform(
     scrollYProgress,
-    [2.0 / numPages, 2.2 / numPages],
-    [4, 1]
+    [2.0 / numPages, 2.1 / numPages],
+    [2, 1]
   );
   const card2Rotate = useTransform(
     scrollYProgress,
-    [2.0 / numPages, 2.2 / numPages],
+    [2.0 / numPages, 2.1 / numPages],
     [5, 5]
   );
 
   const card3Opacity = useTransform(
     scrollYProgress,
-    [2.2 / numPages, 2.4 / numPages],
+    [2.1 / numPages, 2.2 / numPages],
     [0, 1]
   );
   const card3Scale = useTransform(
     scrollYProgress,
-    [2.2 / numPages, 2.4 / numPages],
-    [4, 1]
+    [2.1 / numPages, 2.2 / numPages],
+    [2, 1]
   );
   const card3Rotate = useTransform(
     scrollYProgress,
-    [2.2 / numPages, 2.4 / numPages],
+    [2.1 / numPages, 2.2 / numPages],
     [-5, -5]
   );
 
   const card4Opacity = useTransform(
     scrollYProgress,
-    [2.4 / numPages, 2.6 / numPages],
+    [2.2 / numPages, 2.3 / numPages],
     [0, 1]
   );
   const card4Scale = useTransform(
     scrollYProgress,
-    [2.4 / numPages, 2.6 / numPages],
-    [4, 1]
+    [2.2 / numPages, 2.3 / numPages],
+    [2, 1]
   );
   const card4Rotate = useTransform(
     scrollYProgress,
-    [2.4 / numPages, 2.6 / numPages],
+    [2.2 / numPages, 2.3 / numPages],
     [5, 5]
   );
 

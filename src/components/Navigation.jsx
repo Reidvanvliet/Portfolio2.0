@@ -17,9 +17,9 @@ const Navigation = () => {
     // Define scroll positions for each section based on your app structure
     const sectionPositions = {
       'home': 0,
-      'projects': 0.6 / numPages, // RTS Solutions starts around here
-      'experience': 2.6 / numPages, // Experience section
-      'contact': 3 / numPages // Contact section
+      'projects': 0.5 / numPages, // RTS Solutions starts around here
+      'experience': 2.3 / numPages, // Experience section
+      'contact': 2.7 / numPages // Contact section
     };
 
     const targetPosition = sectionPositions[section] || 0;
