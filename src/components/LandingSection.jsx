@@ -21,6 +21,7 @@ const LandingSection = () => {
 
   return (
     <motion.div
+      id="home"
       className="sticky top-0 w-full h-screen z-2 opacity-100 overflow-hidden left-1/2"
       style={{
         backgroundImage: "url(Origami-background.jpg)",

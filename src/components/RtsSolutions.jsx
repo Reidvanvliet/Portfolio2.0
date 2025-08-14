@@ -32,6 +32,7 @@ const RtsSolutions = () => {
 
   return (
     <motion.div
+      id="projects"
       className="sticky top-0 w-full h-screen z-10 overflow-hidden"
       style={{
         clipPath: circle,

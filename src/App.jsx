@@ -1,5 +1,6 @@
 import { useState } from "react";
 import LoadingScreen from "./components/LoadingScreen";
+import Navigation from "./components/Navigation";
 import LandingSection from "./components/LandingSection";
 import RtsSolutions from "./components/RtsSolutions";
 import GoldenChopsticks from "./components/GoldenChopsticks";
@@ -31,6 +32,7 @@ function AppContent({ isLoading, handleLoadingComplete }) {
 
   return (
     <div className="fixed w-full app" id="app" ref={scrollRef}>
+      <Navigation />
       {isLoading && <LoadingScreen onLoadingComplete={handleLoadingComplete} />}
       <div className="scroll-container">
         <LandingSection />
