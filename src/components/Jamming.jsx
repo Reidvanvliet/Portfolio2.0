@@ -8,13 +8,13 @@ const Jamming = () => {
 
   const circle = useTransform(
     scrollYProgress,
-    [1.15 / numPages, 1.4 / numPages],
+    [1.45 / numPages, 1.7 / numPages],
     ["circle(0)", "circle(100%)"]
   );
 
   const scale = useTransform(
     scrollYProgress,
-    [0, 1.4 / numPages, 1.5 / numPages, 1],
+    [0, 1.7 / numPages, 1.8 / numPages, 1],
     [1, 1, 0, 0],
     { clamp: false }
   );

@@ -8,13 +8,13 @@ const RtsSolutions = () => {
 
   const circle = useTransform(
     scrollYProgress,
-    [0.3 / numPages, 0.6 / numPages],
+    [0.2 / numPages, 0.5 / numPages],
     ["circle(0)", "circle(100%)"]
   )
 
   const scale = useTransform(
     scrollYProgress,
-    [0, 0.6 / numPages, 0.7 / numPages, 1],
+    [0, 0.5 / numPages, 0.6 / numPages, 1],
     [1, 1, 0, 0],
     { clamp: false }
   )

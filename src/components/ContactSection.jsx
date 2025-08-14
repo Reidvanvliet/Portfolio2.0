@@ -18,19 +18,19 @@ const ContactSection = () => {
 
   const height = useTransform(
     scrollYProgress,
-    [2.45 / numPages, 2.7 / numPages],
+    [2.65 / numPages, 2.9 / numPages],
     ["0vh", "100vh"]
   );
 
   const opacity = useTransform(
     scrollYProgress,
-    [2.45 / numPages, 2.46 / numPages],
+    [2.65 / numPages, 2.66 / numPages],
     [0, 1]
   );
 
    const opacity2 = useTransform(
     scrollYProgress,
-    [2.7 / numPages, 2.8 / numPages],
+    [2.9 / numPages, 3 / numPages],
     [0, 1]
   );
 

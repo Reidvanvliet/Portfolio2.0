@@ -7,6 +7,7 @@ import GoldenChopsticks from "./components/GoldenChopsticks";
 import Jamming from "./components/Jamming";
 import ExperienceSection from "./components/ExperienceSection";
 import ContactSection from "./components/ContactSection";
+import ReidIt from "./components/ReidIt";
 import { ScrollProvider, useScrollProgress } from "./contexts/ScrollContext";
 import "./App.css";
 
@@ -38,6 +39,7 @@ function AppContent({ isLoading, handleLoadingComplete }) {
         <LandingSection />
         <RtsSolutions />
         <GoldenChopsticks />
+        <ReidIt />
         <Jamming />
         <ExperienceSection />
         <ContactSection />
