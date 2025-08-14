@@ -115,7 +115,7 @@ const ContactSection = () => {
 
   const downloadResume = () => {
     const link = document.createElement('a');
-    link.href = '/resume.pdf';
+    link.href = '/Reid_VanVliet_2025-08-14.pdf';
     link.download = 'Reid_VanVliet_2025-08-14.pdf';
     link.click();
   };
