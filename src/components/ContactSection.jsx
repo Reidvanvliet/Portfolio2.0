@@ -15,19 +15,19 @@ const ContactSection = () => {
 
   const height = useTransform(
     scrollYProgress,
-    [2.3 / numPages, 2.5 / numPages],
+    [2.45 / numPages, 2.7 / numPages],
     ["0vh", "100vh"]
   );
 
   const opacity = useTransform(
     scrollYProgress,
-    [2.3 / numPages, 2.31 / numPages],
+    [2.45 / numPages, 2.46 / numPages],
     [0, 1]
   );
 
    const opacity2 = useTransform(
     scrollYProgress,
-    [2.5 / numPages, 2.6 / numPages],
+    [2.7 / numPages, 2.8 / numPages],
     [0, 1]
   );
 
@@ -44,7 +44,7 @@ const ContactSection = () => {
   };
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.getElementById("app").scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const downloadResume = () => {

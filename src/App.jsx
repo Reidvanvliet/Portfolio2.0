@@ -27,7 +27,7 @@ function AppContent({ isLoading, handleLoadingComplete }) {
   const { scrollRef } = useScrollProgress();
 
   return (
-    <div className="fixed w-full app" ref={scrollRef}>
+    <div className="fixed w-full app" id="app" ref={scrollRef}>
       <div className='scroll-container'>
         <LandingSection />
         <RtsSolutions />

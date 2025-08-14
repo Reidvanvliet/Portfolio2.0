@@ -9,7 +9,7 @@ export const ScrollProvider = ({ children }) => {
     container: scrollRef,
   });
 
-  const numPages = 2.6;
+  const numPages = 3;
 
   return (
     <ScrollContext.Provider value={{ scrollYProgress, numPages, scrollRef }}>

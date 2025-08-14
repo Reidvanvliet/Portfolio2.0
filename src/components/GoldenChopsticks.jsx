@@ -8,9 +8,16 @@ const GoldenChopsticks = () => {
 
   const circle = useTransform(
     scrollYProgress,
-    [0.6 / numPages, 0.9 / numPages],
+    [0.75 / numPages, 1 / numPages],
     ["circle(0)", "circle(100%)"]
-  )
+  );
+
+  const scale = useTransform(
+    scrollYProgress,
+    [0, 1 / numPages, 1.1 / numPages, 1],
+    [1, 1, 0, 0],
+    { clamp: false }
+  );
 
   useEffect(() => {
     const handleResize = () => {
@@ -38,14 +45,38 @@ const GoldenChopsticks = () => {
         ) : (
           <img src="Golden-chopsticks.png" />
         )}
-        <a 
-          href="https://golden-chopsticks.onrender.com/" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="absolute bg-sunset text-red-900 font-[Reglisse] text-5xl left-1/2 z-12 transform -translate-x-1/2 -translate-y-1/2 bottom-1/8 px-10 py-3 text-center shadow-xl/60 transition-all duration-200 rounded-2xl shadow-md/50 hover:text-red-950 active:shadow-none active:scale-95 border-3"
+        <motion.div
+          className="absolute flex flex-col justify-center items-center w-96 h-96 xl:h-144 xl:w-144 border border-white/20 bg-pink-400/30 backdrop-blur-md z-14 rounded-full"
+          style={{
+            scale,
+          }}
         >
-          Golden Chopsticks
-        </a>
+          <div className="w-full h-full p-8 flex flex-col items-center justify-center pt-24">
+            <p
+              className="text-sm xl:text-base text-center leading-relaxed mb-4"
+              style={{
+                shapeOutside: "circle(50%)",
+                textAlign: "center",
+              }}
+            >
+              RTS Solutions Ltd is a React-based SPA for a Kelowna-area general
+              contracting and renovation company. Built with React 19.1, React
+              Router, GSAP, and custom CSS modules, it features an image-rich
+              gallery, local SEO optimization, and PWA support. Deployed on
+              Netlify with a custom domain, it highlights services like kitchen,
+              bathroom, and full home renovations to attract clients across
+              Kelowna, West Kelowna, and the Okanagan Valley.
+            </p>
+            <a
+              href="https://rtssolutionsltd.ca"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm xl:text-base px-4 py-2 bg-white/10 border border-white/20 rounded-full hover:bg-white/20 hover:border-white/30 transition-all duration-300 backdrop-blur-sm"
+            >
+              Visit Site
+            </a>
+          </div>
+        </motion.div>
       </div>
     </motion.div>
   );

@@ -1,0 +1,55 @@
+        <a 
+          href="https://rtssolutionsltd.ca" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="button-14"
+        >
+          <div class="button-14-top text">Visit</div>
+          <div class="button-14-bottom"></div>
+          <div class="button-14-base"></div>
+        </a>
+
+RTS Solutions Ltd is a React-based Single Page Application (SPA) serving as the business website
+  for a Kelowna-area general contracting and home renovation company.
+
+  Frontend Architecture
+
+  - Framework: React 19.1.0 with modern hooks and functional components
+  - Routing: React Router 7.6.2 with client-side navigation (Home, Gallery, Contact)
+  - Animations: GSAP 3.13.0 for smooth scroll animations and interactive elements
+  - Icons: React Icons 5.5.0 for UI components
+  - Build System: Create React App with standard webpack configuration
+
+  Project Structure
+
+  - Component Architecture: Modular design with separate components for each page section
+  (HomeBanner, Services, ProjectHighlights, etc.)
+  - Data Management: Static project data stored in data.js containing 6 project categories with 143+     
+   high-resolution images
+  - Styling: Custom CSS modules organized by component with a reset stylesheet foundation
+
+  SEO & Performance Optimization
+
+  - Structured Data: JSON-LD schema markup for local business SEO targeting "Kelowna general
+  contractor" keywords
+  - Meta Tags: Comprehensive OpenGraph and Twitter Card meta tags
+  - Sitemap & Robots: XML sitemap with proper priority weighting and search engine directives
+  - PWA Features: Web App Manifest for mobile installation capability
+
+  Content & Media
+
+  - Image Gallery: 6 project portfolios showcasing renovations (beach house, residential, exteriors,     
+   kitchens, fencing, other spaces)
+  - Local SEO Focus: Heavy emphasis on "Kelowna," "West Kelowna," and "Okanagan Valley" geographic       
+  targeting
+  - Service Areas: Kitchen remodels, bathroom renovations, full home renovations, exterior updates,      
+  and fencing
+
+  Deployment Configuration
+
+  - Static Hosting: Configured for Netlify deployment with _redirects file for SPA routing
+  - Domain: rtssolutionsltd.ca with proper canonical URLs
+  - No Backend: Pure frontend application with static content and contact forms
+
+  This is a professionally built, SEO-optimized business website designed to showcase renovation
+  projects and attract local clients in the BC interior market.

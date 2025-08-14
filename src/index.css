@@ -1,16 +1,6 @@
 @import "tailwindcss";
 
 @font-face {
-    font-family: RacingSans;
-    src: url(RacingSansOne-Regular.ttf);
-}
-
-@font-face {
-    font-family: VabiDasabi;
-    src: url(Vabi-Dasabi.ttf);
-}
-
-@font-face {
     font-family: Reglisse;
     src: url(Reglisse.otf);
 }
@@ -33,6 +23,7 @@ html, body {
     overflow: hidden;
     margin: 0;
     padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .app {
