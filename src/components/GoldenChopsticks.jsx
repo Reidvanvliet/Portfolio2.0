@@ -46,7 +46,7 @@ const GoldenChopsticks = () => {
           <img src="Golden-chopsticks.png" />
         )}
         <motion.div
-          className="absolute flex flex-col justify-center items-center w-96 h-96 xl:h-144 xl:w-144 border border-white/20 bg-pink-400/30 backdrop-blur-md z-14 rounded-full"
+          className="absolute flex flex-col justify-center items-center w-96 h-96 xl:h-144 xl:w-144 border border-white/20 bg-pink-400/30 backdrop-blur-md z-24 rounded-full"
           style={{
             scale,
           }}
@@ -59,16 +59,18 @@ const GoldenChopsticks = () => {
                 textAlign: "center",
               }}
             >
-              RTS Solutions Ltd is a React-based SPA for a Kelowna-area general
-              contracting and renovation company. Built with React 19.1, React
-              Router, GSAP, and custom CSS modules, it features an image-rich
-              gallery, local SEO optimization, and PWA support. Deployed on
-              Netlify with a custom domain, it highlights services like kitchen,
-              bathroom, and full home renovations to attract clients across
-              Kelowna, West Kelowna, and the Okanagan Valley.
+              Golden Chopsticks is a full-stack React web application
+              featuring user authentication via Google OAuth, menu
+              management, shopping cart functionality, and
+              Stripe payment integration. The frontend uses React 19 with React
+              Router, Tailwind CSS, and Google Maps API for address
+              autocomplete. The Node.js/Express backend implements JWT
+              authentication, PostgreSQL database with Sequelize ORM, admin menu
+              management, order processing, and Google Cloud Storage for file
+              uploads.
             </p>
             <a
-              href="https://rtssolutionsltd.ca"
+              href="https://golden-chopsticks.onrender.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm xl:text-base px-4 py-2 bg-white/10 border border-white/20 rounded-full hover:bg-white/20 hover:border-white/30 transition-all duration-300 backdrop-blur-sm"

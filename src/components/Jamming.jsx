@@ -59,16 +59,17 @@ const Jamming = () => {
                 textAlign: "center",
               }}
             >
-              RTS Solutions Ltd is a React-based SPA for a Kelowna-area general
-              contracting and renovation company. Built with React 19.1, React
-              Router, GSAP, and custom CSS modules, it features an image-rich
-              gallery, local SEO optimization, and PWA support. Deployed on
-              Netlify with a custom domain, it highlights services like kitchen,
-              bathroom, and full home renovations to attract clients across
-              Kelowna, West Kelowna, and the Okanagan Valley.
+              Jammming is a React web application that integrates with Spotify's
+              Web API for music discovery and playlist management. Built with
+              Vite and modern React hooks, it enables users to search for
+              tracks, artists, and albums using Spotify's client credentials
+              flow. The app features OAuth authentication for playlist creation,
+              allowing logged-in users to curate custom playlists and save them
+              directly to their Spotify accounts. The interface displays search
+              results in a responsive grid layout with mobile optimization.
             </p>
             <a
-              href="https://rtssolutionsltd.ca"
+              href="https://jamming-reidvanvliet.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm xl:text-base px-4 py-2 bg-white/10 border border-white/20 rounded-full hover:bg-white/20 hover:border-white/30 transition-all duration-300 backdrop-blur-sm"
