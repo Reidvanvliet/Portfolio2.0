@@ -30,12 +30,19 @@ const LoadingScreen = ({onLoadingComplete}) => {
       setLoadingProgress(progress);
       
       if (progress >= 100) {
+        // Ensure minimum loading time of 2 seconds for animation
+        const minLoadingTime = 2000;
+        const elapsedTime = Date.now() - startTime;
+        const remainingTime = Math.max(0, minLoadingTime - elapsedTime);
+        
         setTimeout(() => {
           setIsComplete(true);
           setTimeout(() => onLoadingComplete(), 800);
-        }, 500);
+        }, remainingTime + 500);
       }
     };
+
+    const startTime = Date.now();
 
     // Load all critical images
     criticalImages.forEach((src) => {
@@ -56,10 +63,15 @@ const LoadingScreen = ({onLoadingComplete}) => {
     const fallbackTimeout = setTimeout(() => {
       if (loadingProgress < 100) {
         setLoadingProgress(100);
+        // Apply minimum loading time even for fallback
+        const minLoadingTime = 2000;
+        const elapsedTime = Date.now() - startTime;
+        const remainingTime = Math.max(0, minLoadingTime - elapsedTime);
+        
         setTimeout(() => {
           setIsComplete(true);
           setTimeout(() => onLoadingComplete(), 800);
-        }, 500);
+        }, remainingTime + 500);
       }
     }, 10000); // 10 second timeout
 
