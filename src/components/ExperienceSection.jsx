@@ -45,7 +45,7 @@ const ExperienceSection = () => {
   const card1Rotate = useTransform(
     scrollYProgress,
     [1.9 / numPages, 2.0 / numPages],
-    [-5, -5]
+    [-2, -2]
   );
 
   const card2Opacity = useTransform(
@@ -61,7 +61,7 @@ const ExperienceSection = () => {
   const card2Rotate = useTransform(
     scrollYProgress,
     [2.0 / numPages, 2.1 / numPages],
-    [5, 5]
+    [2, 2]
   );
 
   const card3Opacity = useTransform(
@@ -77,7 +77,7 @@ const ExperienceSection = () => {
   const card3Rotate = useTransform(
     scrollYProgress,
     [2.1 / numPages, 2.2 / numPages],
-    [-5, -5]
+    [-2, -2]
   );
 
   const card4Opacity = useTransform(
@@ -93,7 +93,7 @@ const ExperienceSection = () => {
   const card4Rotate = useTransform(
     scrollYProgress,
     [2.2 / numPages, 2.3 / numPages],
-    [5, 5]
+    [2, 2]
   );
 
   useEffect(() => {
@@ -121,7 +121,7 @@ const ExperienceSection = () => {
       {/* Web Developer Card */}
       <motion.div 
         style={{ opacity: card1Opacity, scale: card1Scale, rotate: card1Rotate }}
-        className="relative h-52 lg:h-64 w-96 lg:max-w-120 m-2 mt-10 p-3 lg:p-4 flex flex-col justify-center items-center text-center cursor-pointer"
+        className="relative h-64 w-104 lg:max-w-120 mx-2 mt-10 p-3 lg:p-4 flex flex-col justify-center items-center text-center cursor-pointer"
         onClick={() => handleCardClick('card1')}
       >
         <div className="relative w-full h-full perspective-1000">
@@ -153,7 +153,7 @@ const ExperienceSection = () => {
                 style={{ backgroundImage: 'url(/Index-card.jpg)' }}
               />
               <div className="relative z-12 text-black p-6 h-full flex flex-col justify-center">
-                <p className="text-xs lg:text-sm">I'm a full-stack developer with experience through courses on Codecademy and a certification in Full-Stack Engineering. I specialize in the PERN stack and have worked on multiple professional and personal projects. I have a strong understanding of web security and frequently integrate AI tools into development. I'm constantly seeking new challenges and opportunities to grow because web development is AWESOME!</p>
+                <p className="text-sm lg:text-sm">I'm a full-stack developer with experience through courses on Codecademy and a certification in Full-Stack Engineering. I specialize in the PERN stack and have worked on multiple professional and personal projects. I have a strong understanding of web security and frequently integrate AI tools into development. I'm constantly seeking new challenges and opportunities to grow because web development is AWESOME!</p>
               </div>
             </div>
           </motion.div>
@@ -163,7 +163,7 @@ const ExperienceSection = () => {
       {/* Builder Card */}
       <motion.div 
         style={{ opacity: card2Opacity, scale: card2Scale, rotate: card2Rotate }}
-        className="relative h-52 lg:h-64 w-96 lg:max-w-120 m-2 -mt-2 p-3 lg:p-4 flex flex-col justify-center items-center text-center cursor-pointer"
+        className="relative h-64 w-104 lg:max-w-120 mx-2 -mt-5 p-3 lg:p-4 flex flex-col justify-center items-center text-center cursor-pointer"
         onClick={() => handleCardClick('card2')}
       >
         <div className="relative w-full h-full perspective-1000">
@@ -194,7 +194,7 @@ const ExperienceSection = () => {
                 style={{ backgroundImage: 'url(/Index-card.jpg)' }}
               />
               <div className="relative z-10 text-black p-6 h-full flex flex-col justify-center">
-                <p className="text-xs lg:text-sm">I bring 5 years of cumulative experience in construction, working on a diverse range of projects including new home builds, sheet metal structures, and complex renovations with challenging concept designs. I thrive on the creativity and problem-solving that construction demands, and I genuinely enjoy building, creating, and taking on new challenges that push my skills forward.</p>
+                <p className="text-sm lg:text-sm">I bring 5 years of cumulative experience in construction, working on a diverse range of projects including new home builds, sheet metal structures, and complex renovations with challenging concept designs. I thrive on the creativity and problem-solving that construction demands, and I genuinely enjoy building, creating, and taking on new challenges that push my skills forward.</p>
               </div>
             </div>
           </motion.div>
@@ -204,7 +204,7 @@ const ExperienceSection = () => {
       {/* Entrepreneur Card */}
       <motion.div 
         style={{ opacity: card3Opacity, scale: card3Scale, rotate: card3Rotate }}
-        className="relative h-52 lg:h-64 w-96 lg:max-w-120 m-2 -mt-2 p-3 lg:p-4 flex flex-col justify-center items-center text-center cursor-pointer"
+        className="relative h-64 w-104 lg:max-w-120 mx-2 -mt-5 p-3 lg:p-4 flex flex-col justify-center items-center text-center cursor-pointer"
         onClick={() => handleCardClick('card3')}
       >
         <div className="relative w-full h-full perspective-1000">
@@ -235,7 +235,7 @@ const ExperienceSection = () => {
                 style={{ backgroundImage: 'url(/Index-card.jpg)' }}
               />
               <div className="relative z-10 text-black p-6 h-full flex flex-col justify-center">
-                <p className="text-xs lg:text-sm">At 20 years old, I founded a restaurant delivery service. I started with one major restaurant and, over the course of three years, scaled the business to include 15 restaurants, a team of 7 employees, and over 2,000 deliveries per month. This experience sharpened my skills in operations, logistics, customer service, and business development—while fueling my passion for building efficient systems from the ground up.</p>
+                <p className="text-sm lg:text-sm">At 20 years old, I founded a restaurant delivery service. I started with one major restaurant and, over the course of three years, scaled the business to include 15 restaurants, a team of 7 employees, and over 2,000 deliveries per month. This experience sharpened my skills in operations, logistics, customer service, and business development—while fueling my passion for building efficient systems from the ground up.</p>
               </div>
             </div>
           </motion.div>
@@ -245,7 +245,7 @@ const ExperienceSection = () => {
       {/* Manager Card */}
       <motion.div 
         style={{ opacity: card4Opacity, scale: card4Scale, rotate: card4Rotate }}
-        className="relative h-52 lg:h-64 w-96 lg:max-w-120 m-2 -mt-2 p-3 lg:p-4 flex flex-col justify-center items-center text-center cursor-pointer"
+        className="relative h-64 w-104 lg:max-w-120 mx-2 -mt-5 p-3 lg:p-4 flex flex-col justify-center items-center text-center cursor-pointer"
         onClick={() => handleCardClick('card4')}
       >
         <div className="relative w-full h-full perspective-1000">
@@ -276,7 +276,7 @@ const ExperienceSection = () => {
                 style={{ backgroundImage: 'url(/Index-card.jpg)' }}
               />
               <div className="relative z-10 text-black p-6 h-full flex flex-col justify-center">
-                <p className="text-xs lg:text-sm">When Papa John's West Kelowna came under new ownership, I saw an opportunity to help. Over the next three years, I worked with the owner to build a strong, reliable team and establish a positive reputation within the community. Together, we implemented operational practices that improved efficiency, consistency, and overall performance, transforming the store into a well-run, respected business.</p>
+                <p className="text-sm lg:text-sm">When Papa John's West Kelowna came under new ownership, I saw an opportunity to help. Over the next three years, I worked with the owner to build a strong, reliable team and establish a positive reputation within the community. Together, we implemented operational practices that improved efficiency, consistency, and overall performance, transforming the store into a well-run, respected business.</p>
               </div>
             </div>
           </motion.div>
