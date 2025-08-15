@@ -61,7 +61,7 @@ const ExperienceSection = () => {
   const card2Rotate = useTransform(
     scrollYProgress,
     [2.0 / numPages, 2.1 / numPages],
-    [0, 0]
+    [3, 3]
   );
 
   const card3Opacity = useTransform(
@@ -77,7 +77,7 @@ const ExperienceSection = () => {
   const card3Rotate = useTransform(
     scrollYProgress,
     [2.1 / numPages, 2.2 / numPages],
-    [5, 5]
+    [-3, -3]
   );
 
   const card4Opacity = useTransform(
@@ -93,7 +93,7 @@ const ExperienceSection = () => {
   const card4Rotate = useTransform(
     scrollYProgress,
     [2.2 / numPages, 2.3 / numPages],
-    [-2, -2]
+    [5, 5]
   );
 
   useEffect(() => {
@@ -248,7 +248,7 @@ const ExperienceSection = () => {
       {/* Manager Card */}
       <motion.div 
         style={{ opacity: card4Opacity, scale: card4Scale, rotate: card4Rotate }}
-        className="relative h-64 w-104 lg:max-w-120 mx-2 -mt-5 p-3 lg:p-4 flex flex-col justify-center items-center text-center cursor-pointer"
+        className="relative h-64 w-104 lg:max-w-120 mx-2 -mt-5 -mb-5 p-3 lg:p-4 flex flex-col justify-center items-center text-center cursor-pointer"
         onClick={() => handleCardClick('card4')}
       >
         <div className="relative w-full h-full perspective-1000">
