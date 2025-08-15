@@ -154,7 +154,7 @@ const ExperienceSection = () => {
                 style={{ backgroundImage: 'url(/Index-card.jpg)' }}
               />
               <div className="relative z-12 text-black p-6 h-full flex flex-col justify-center">
-                <p className="text-[13px]">I'm a full-stack developer with experience through courses on Codecademy and a certification in Full-Stack Engineering. I specialize in the PERN stack and have worked on multiple professional and personal projects. I have a strong understanding of web security and frequently integrate AI tools into development. I'm constantly seeking new challenges and opportunities to grow because web development is AWESOME!</p>
+                <p className="text-xs lg:text-sm">I'm a full-stack developer with experience through courses on Codecademy and a certification in Full-Stack Engineering. I specialize in the PERN stack and have worked on multiple professional and personal projects. I have a strong understanding of web security and frequently integrate AI tools into development. I'm constantly seeking new challenges and opportunities to grow because web development is AWESOME!</p>
               </div>
             </div>
           </motion.div>
@@ -196,7 +196,7 @@ const ExperienceSection = () => {
                 style={{ backgroundImage: 'url(/Index-card.jpg)' }}
               />
               <div className="relative z-10 text-black p-6 h-full flex flex-col justify-center">
-                <p className="text-[13px]">I bring 5 years of cumulative experience in construction, working on a diverse range of projects including new home builds, sheet metal structures, and complex renovations with challenging concept designs. I thrive on the creativity and problem-solving that construction demands, and I genuinely enjoy building, creating, and taking on new challenges that push my skills forward.</p>
+                <p className="text-xs lg:text-sm">I bring 5 years of cumulative experience in construction, working on a diverse range of projects including new home builds, sheet metal structures, and complex renovations with challenging concept designs. I thrive on the creativity and problem-solving that construction demands, and I genuinely enjoy building, creating, and taking on new challenges that push my skills forward.</p>
               </div>
             </div>
           </motion.div>
@@ -238,7 +238,7 @@ const ExperienceSection = () => {
                 style={{ backgroundImage: 'url(/Index-card.jpg)' }}
               />
               <div className="relative z-10 text-black p-6 h-full flex flex-col justify-center">
-                <p className="text-[13px]">At 20 years old, I founded a restaurant delivery service. I started with one major restaurant and, over the course of three years, scaled the business to include 15 restaurants, a team of 7 employees, and over 2,000 deliveries per month. This experience sharpened my skills in operations, logistics, customer service, and business development—while fueling my passion for building efficient systems from the ground up.</p>
+                <p className="text-xs lg:text-sm">At 20 years old, I founded a restaurant delivery service. I started with one major restaurant and, over the course of three years, scaled the business to include 15 restaurants, a team of 7 employees, and over 2,000 deliveries per month. This experience sharpened my skills in operations, logistics, customer service, and business development—while fueling my passion for building efficient systems from the ground up.</p>
               </div>
             </div>
           </motion.div>
@@ -280,7 +280,7 @@ const ExperienceSection = () => {
                 style={{ backgroundImage: 'url(/Index-card.jpg)' }}
               />
               <div className="relative z-10 text-black p-6 h-full flex flex-col justify-center">
-                <p className="text-[13px]">When Papa John's West Kelowna came under new ownership, I saw an opportunity to help. Over the next three years, I worked with the owner to build a strong, reliable team and establish a positive reputation within the community. Together, we implemented operational practices that improved efficiency, consistency, and overall performance, transforming the store into a well-run, respected business.</p>
+                <p className="text-xs lg:text-sm">When Papa John's West Kelowna came under new ownership, I saw an opportunity to help. Over the next three years, I worked with the owner to build a strong, reliable team and establish a positive reputation within the community. Together, we implemented operational practices that improved efficiency, consistency, and overall performance, transforming the store into a well-run, respected business.</p>
               </div>
             </div>
           </motion.div>
