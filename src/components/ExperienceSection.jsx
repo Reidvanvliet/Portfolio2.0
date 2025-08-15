@@ -45,7 +45,7 @@ const ExperienceSection = () => {
   const card1Rotate = useTransform(
     scrollYProgress,
     [1.9 / numPages, 2.0 / numPages],
-    [-2, -2]
+    [-5, -5]
   );
 
   const card2Opacity = useTransform(
@@ -121,7 +121,7 @@ const ExperienceSection = () => {
       {/* Web Developer Card */}
       <motion.div 
         style={{ opacity: card1Opacity, scale: card1Scale, rotate: card1Rotate }}
-        className="relative h-64 w-104 lg:max-w-120 mx-2 mt-10 p-3 lg:p-4 flex flex-col justify-center items-center text-center cursor-pointer"
+        className="relative h-64 w-104 lg:max-w-120 mx-2 mt-15 p-3 lg:p-4 flex flex-col justify-center items-center text-center cursor-pointer"
         onClick={() => handleCardClick('card1')}
       >
         <div className="relative w-full h-full perspective-1000">
