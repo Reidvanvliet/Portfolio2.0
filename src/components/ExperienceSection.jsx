@@ -61,7 +61,7 @@ const ExperienceSection = () => {
   const card2Rotate = useTransform(
     scrollYProgress,
     [2.0 / numPages, 2.1 / numPages],
-    [2, 2]
+    [0, 0]
   );
 
   const card3Opacity = useTransform(
@@ -77,7 +77,7 @@ const ExperienceSection = () => {
   const card3Rotate = useTransform(
     scrollYProgress,
     [2.1 / numPages, 2.2 / numPages],
-    [-2, -2]
+    [5, 5]
   );
 
   const card4Opacity = useTransform(
@@ -93,7 +93,7 @@ const ExperienceSection = () => {
   const card4Rotate = useTransform(
     scrollYProgress,
     [2.2 / numPages, 2.3 / numPages],
-    [2, 2]
+    [-2, -2]
   );
 
   useEffect(() => {
@@ -142,8 +142,9 @@ const ExperienceSection = () => {
                 alt="Pushpin" 
                 className="absolute lg:w-12 lg:h-8 mt-3 lg:mt-5 top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-6 z-20"
               />
-              <div className="relative z-12 text-black h-full flex items-center justify-center">
+              <div className="relative z-12 text-black h-full flex flex-col items-center justify-center">
                 <h2 className="text-xl lg:text-2xl font-bold">Web Developer</h2>
+                <p className="text-xs mt-2 opacity-60">Click to flip</p>
               </div>
             </div>
             {/* Back of card */}
@@ -153,7 +154,7 @@ const ExperienceSection = () => {
                 style={{ backgroundImage: 'url(/Index-card.jpg)' }}
               />
               <div className="relative z-12 text-black p-6 h-full flex flex-col justify-center">
-                <p className="text-sm lg:text-sm">I'm a full-stack developer with experience through courses on Codecademy and a certification in Full-Stack Engineering. I specialize in the PERN stack and have worked on multiple professional and personal projects. I have a strong understanding of web security and frequently integrate AI tools into development. I'm constantly seeking new challenges and opportunities to grow because web development is AWESOME!</p>
+                <p className="text-[13px]">I'm a full-stack developer with experience through courses on Codecademy and a certification in Full-Stack Engineering. I specialize in the PERN stack and have worked on multiple professional and personal projects. I have a strong understanding of web security and frequently integrate AI tools into development. I'm constantly seeking new challenges and opportunities to grow because web development is AWESOME!</p>
               </div>
             </div>
           </motion.div>
@@ -183,8 +184,9 @@ const ExperienceSection = () => {
                 alt="Pushpin" 
                 className="absolute lg:w-12 lg:h-8 mt-3 lg:mt-5 top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-6 z-20"
               />
-              <div className="relative z-10 text-black h-full flex items-center justify-center">
+              <div className="relative z-10 text-black h-full flex flex-col items-center justify-center">
                 <h2 className="text-xl lg:text-2xl font-bold">Builder</h2>
+                <p className="text-xs mt-2 opacity-60">Click to flip</p>
               </div>
             </div>
             {/* Back of card */}
@@ -194,7 +196,7 @@ const ExperienceSection = () => {
                 style={{ backgroundImage: 'url(/Index-card.jpg)' }}
               />
               <div className="relative z-10 text-black p-6 h-full flex flex-col justify-center">
-                <p className="text-sm lg:text-sm">I bring 5 years of cumulative experience in construction, working on a diverse range of projects including new home builds, sheet metal structures, and complex renovations with challenging concept designs. I thrive on the creativity and problem-solving that construction demands, and I genuinely enjoy building, creating, and taking on new challenges that push my skills forward.</p>
+                <p className="text-[13px]">I bring 5 years of cumulative experience in construction, working on a diverse range of projects including new home builds, sheet metal structures, and complex renovations with challenging concept designs. I thrive on the creativity and problem-solving that construction demands, and I genuinely enjoy building, creating, and taking on new challenges that push my skills forward.</p>
               </div>
             </div>
           </motion.div>
@@ -224,8 +226,9 @@ const ExperienceSection = () => {
                 alt="Pushpin" 
                 className="absolute lg:w-12 lg:h-8 mt-3 lg:mt-5 top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-6 z-20"
               />
-              <div className="relative z-10 text-black h-full flex items-center justify-center">
+              <div className="relative z-10 text-black h-full flex flex-col items-center justify-center">
                 <h2 className="text-xl lg:text-2xl font-bold">Entrepreneur</h2>
+                <p className="text-xs mt-2 opacity-60">Click to flip</p>
               </div>
             </div>
             {/* Back of card */}
@@ -235,7 +238,7 @@ const ExperienceSection = () => {
                 style={{ backgroundImage: 'url(/Index-card.jpg)' }}
               />
               <div className="relative z-10 text-black p-6 h-full flex flex-col justify-center">
-                <p className="text-sm lg:text-sm">At 20 years old, I founded a restaurant delivery service. I started with one major restaurant and, over the course of three years, scaled the business to include 15 restaurants, a team of 7 employees, and over 2,000 deliveries per month. This experience sharpened my skills in operations, logistics, customer service, and business development—while fueling my passion for building efficient systems from the ground up.</p>
+                <p className="text-[13px]">At 20 years old, I founded a restaurant delivery service. I started with one major restaurant and, over the course of three years, scaled the business to include 15 restaurants, a team of 7 employees, and over 2,000 deliveries per month. This experience sharpened my skills in operations, logistics, customer service, and business development—while fueling my passion for building efficient systems from the ground up.</p>
               </div>
             </div>
           </motion.div>
@@ -265,8 +268,9 @@ const ExperienceSection = () => {
                 alt="Pushpin" 
                 className="absolute lg:w-12 lg:h-8 mt-3 lg:mt-5 top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-6 z-20"
               />
-              <div className="relative z-10 text-black h-full flex items-center justify-center">
+              <div className="relative z-10 text-black h-full flex flex-col items-center justify-center">
                 <h2 className="text-xl lg:text-2xl font-bold">Manager</h2>
+                <p className="text-xs mt-2 opacity-60">Click to flip</p>
               </div>
             </div>
             {/* Back of card */}
@@ -276,7 +280,7 @@ const ExperienceSection = () => {
                 style={{ backgroundImage: 'url(/Index-card.jpg)' }}
               />
               <div className="relative z-10 text-black p-6 h-full flex flex-col justify-center">
-                <p className="text-sm lg:text-sm">When Papa John's West Kelowna came under new ownership, I saw an opportunity to help. Over the next three years, I worked with the owner to build a strong, reliable team and establish a positive reputation within the community. Together, we implemented operational practices that improved efficiency, consistency, and overall performance, transforming the store into a well-run, respected business.</p>
+                <p className="text-[13px]">When Papa John's West Kelowna came under new ownership, I saw an opportunity to help. Over the next three years, I worked with the owner to build a strong, reliable team and establish a positive reputation within the community. Together, we implemented operational practices that improved efficiency, consistency, and overall performance, transforming the store into a well-run, respected business.</p>
               </div>
             </div>
           </motion.div>
