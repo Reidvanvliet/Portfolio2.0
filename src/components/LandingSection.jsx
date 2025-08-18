@@ -29,9 +29,9 @@ const LandingSection = () => {
         backgroundSize: "cover",
       }}
     >
-      <div className="absolute text-center sm:text-9xl text-7xl font-[Reglisse] tracking-wider left-1/2 top-1/4 w-full transform -translate-x-1/2 -translate-y-1/2  text-red-900 z-5">
+      <div className="absolute text-center sm:text-9xl text-7xl tracking-wider left-1/2 top-1/4 mt-10 w-full transform -translate-x-1/2 -translate-y-1/2  text-red-900 z-5">
         {text.split(" ").map((word, wordIndex) => (
-          <div key={wordIndex} className="block">
+          <div key={wordIndex} className="block font-[Reglisse]">
             {word.split("").map((char, i) => (
               <motion.span
                 key={i}
@@ -53,6 +53,7 @@ const LandingSection = () => {
             ))}
           </div>
         ))}
+      <h2 className="text-5xl sm:text-7xl mt-10 font-bold">PORTFOLIO</h2>
       </div>
       <motion.img 
         src="myFaceAnimated.png"

@@ -121,7 +121,7 @@ const ExperienceSection = () => {
       {/* Web Developer Card */}
       <motion.div 
         style={{ opacity: card1Opacity, scale: card1Scale, rotate: card1Rotate }}
-        className="relative h-64 w-96 lg:max-w-120 mx-2 mt-15 p-3 lg:p-4 flex flex-col justify-center items-center text-center cursor-pointer"
+        className="relative h-64 w-96 lg:w-120 mx-2 mt-15 p-3 lg:p-4 flex flex-col justify-center items-center text-center cursor-pointer"
         onClick={() => handleCardClick('card1')}
       >
         <div className="relative w-full h-full perspective-1000">
@@ -169,7 +169,7 @@ const ExperienceSection = () => {
       {/* Builder Card */}
       <motion.div 
         style={{ opacity: card2Opacity, scale: card2Scale, rotate: card2Rotate }}
-        className="relative h-64 w-96 lg:max-w-120 mx-2 -mt-5 p-3 lg:p-4 flex flex-col justify-center items-center text-center cursor-pointer"
+        className="relative h-64 w-96 lg:w-120 mx-2 -mt-5 p-3 lg:p-4 flex flex-col justify-center items-center text-center cursor-pointer"
         onClick={() => handleCardClick('card2')}
       >
         <div className="relative w-full h-full perspective-1000">
@@ -216,7 +216,7 @@ const ExperienceSection = () => {
       {/* Entrepreneur Card */}
       <motion.div 
         style={{ opacity: card3Opacity, scale: card3Scale, rotate: card3Rotate }}
-        className="relative h-64 w-96 lg:max-w-120 mx-2 -mt-5 p-3 lg:p-4 flex flex-col justify-center items-center text-center cursor-pointer"
+        className="relative h-64 w-96 lg:w-120 mx-2 -mt-5 p-3 lg:p-4 flex flex-col justify-center items-center text-center cursor-pointer"
         onClick={() => handleCardClick('card3')}
       >
         <div className="relative w-full h-full perspective-1000">
@@ -263,7 +263,7 @@ const ExperienceSection = () => {
       {/* Manager Card */}
       <motion.div 
         style={{ opacity: card4Opacity, scale: card4Scale, rotate: card4Rotate }}
-        className="relative h-64 w-96 lg:max-w-120 mx-2 -mt-5 -mb-5 p-3 lg:p-4 flex flex-col justify-center items-center text-center cursor-pointer"
+        className="relative h-64 w-96 lg:w-120 mx-2 -mt-5 -mb-5 p-3 lg:p-4 flex flex-col justify-center items-center text-center cursor-pointer"
         onClick={() => handleCardClick('card4')}
       >
         <div className="relative w-full h-full perspective-1000">
@@ -308,7 +308,7 @@ const ExperienceSection = () => {
       </motion.div>
 
       {/* Center image for large screens only */}
-      <div className="hidden lg:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -z-1">
+      <div className="hidden lg:block absolute mt-3 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -z-1">
         <img 
           src="/Restaurants-delivered.png" 
           alt="Restaurants delivered" 
