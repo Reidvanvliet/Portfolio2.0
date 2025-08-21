@@ -59,7 +59,7 @@ const GoldenChopsticks = () => {
                 textAlign: "center",
               }}
             >
-              Golden Chopsticks is a full-stack React web application
+              Dragon Bite is a full-stack React web application
               featuring user authentication via Google OAuth, menu
               management, cart functionality, and
               Stripe payments. The frontend uses React 19 with React
