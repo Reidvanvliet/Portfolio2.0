@@ -53,7 +53,7 @@ const LandingSection = () => {
             ))}
           </div>
         ))}
-      <h2 className="text-5xl sm:text-7xl sm:mt-8 mt-4 font-bold">PORTFOLIO</h2>
+      <h2 className="text-3xl sm:text-6xl sm:mt-8 mt-4 font-bold">PORTFOLIO</h2>
       </div>
       <motion.img 
         src="myFaceAnimated.png"

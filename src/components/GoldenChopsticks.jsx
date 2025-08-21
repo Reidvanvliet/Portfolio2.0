@@ -67,13 +67,13 @@ const GoldenChopsticks = () => {
               autocomplete. The Node.js/Express backend implements JWT
               authentication, PostgreSQL database with Sequelize ORM, admin menu
               management, order processing, and Google Cloud Storage for file
-              uploads.
+              uploads. <str className="font-bold">(Demo Site)</str>
             </p>
             <a
               href="https://golden-chopsticks.onrender.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm xl:text-base px-4 py-2 bg-white/10 border border-white/20 rounded-full hover:bg-white/20 hover:border-white/30 transition-all duration-300 backdrop-blur-sm"
+              className="text-sm/4 xl:text-base px-4 py-2 bg-white/10 border border-white/20 rounded-full hover:bg-white/20 hover:border-white/30 transition-all duration-300 backdrop-blur-sm text-center"
             >
               Visit Site
             </a>
