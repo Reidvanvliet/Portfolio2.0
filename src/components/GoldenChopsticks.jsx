@@ -70,7 +70,7 @@ const GoldenChopsticks = () => {
               uploads. <str className="font-bold">(Demo Site)</str>
             </p>
             <a
-              href="https://golden-chopsticks.onrender.com/"
+              href="https://goldenchopsticks.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm/4 xl:text-base px-4 py-2 bg-white/10 border border-white/20 rounded-full hover:bg-white/20 hover:border-white/30 transition-all duration-300 backdrop-blur-sm text-center"
